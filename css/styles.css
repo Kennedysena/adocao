@@ -1,0 +1,741 @@
+/* Paleta de cores moderna */
+:root {
+    --primary-color: #FF7F50; /* Coral vibrante */
+    --secondary-color: #4CAF50; /* Verde claro */
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-gray: #ddd;
+    --white: #fff;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+header .logo {
+    max-height: 60px;
+   
+    
+}
+
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    
+}
+
+/* Carrossel */
+.carousel-inner img {
+    margin-top: 40px;
+    height: 500px;
+    object-fit: contain;
+    transition: all 300ms;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+
+
+/* Vídeo */
+#video {
+    background-color: var(--background-color);
+    padding: 60px 20px;
+}
+
+#video h3 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+video {
+    border: 5px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Estatísticas */
+#estatisticas {
+    padding: 60px 20px;
+    background-color: var(--white);
+}
+
+#estatisticas h3 {
+    color: var(--secundary-color);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h4 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    height: 80px;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* section*/
+
+/* Seção Hero */
+/* Seção Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Faz a seção ocupar a altura total da janela */
+    padding: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.hero .btn-primary {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--white);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção História */
+.history-container {
+    background: var(--white);
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    margin: 20px auto;
+    max-width: 1300px;
+}
+
+.history-container .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.history-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .history-container {
+        padding: 30px 15px;
+    }
+
+    .history-container .section-title {
+        font-size: 2rem;
+    }
+
+    .history-container p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilo geral para a mensagem de boas-vindas */
+.welcome-message {
+    text-align: center;
+    margin: 20px 0;
+    background-color: var(--secondary-color-light); /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Estilo do container da história */
+.history-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--background-color-light); /* Fundo suave */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color-dark);
+}
+
+.history-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo das seções de Missão, Visão e Valores */
+.mission-vision-values-container {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--secondary-color-light);
+    border-radius: 10px;
+}
+
+.mission-vision-values-container h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mission-vision-values-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-dark);
+}
+
+.mission-vision-values-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+}
+
+.mission-vision-values-container ul li {
+    margin-bottom: 8px;
+}
+
+.mission-vision-values-container ul li strong {
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.2rem;
+    }
+
+    .history-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .mission-vision-values-container h3 {
+        font-size: 1.3rem;
+    }
+}
+
+
+    /* Keyframe para a animação do texto vindo pela lateral */
+@keyframes slideInAndOut {
+  0% {
+    transform: translateX(100%); /* Fora da tela à direita */
+  }
+  25% {
+    transform: translateX(0); /* Totalmente visível no centro */
+  }
+  75% {
+    transform: translateX(0); /* Pausa no centro */
+  }
+  100% {
+    transform: translateX(-100%); /* Sai pela esquerda */
+  }
+}
+
+/* Classe para o texto animado */
+.animated-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  overflow: hidden; /* Esconde o texto enquanto sai da tela */
+  white-space: nowrap; /* Evita quebra de linha */
+  animation: slideInAndOut 3s ease-in-out infinite; /* Duração de 5s e repetição infinita */
+}
+
+/* Geral para o título da seção */
+.hero-adoption {
+    background-color: #5A90A6;
+    color: white;
+    padding: 50px 0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Estilização da galeria de adoção */
+.adoption-gallery {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.adoption-gallery h2 {
+    color: #5A90A6;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Estilo dos cards individuais */
+.pet-card {
+    background-color: #F5F5F5;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-card img {
+    border-radius: 8px;
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.pet-card img:nth-child(4){
+   height: 2px;
+}
+
+.pet-card h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.pet-card p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.pet-card button {
+    background-color: #5A90A6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pet-card button:hover {
+    background-color: #407d92;
+}
+
+.pet-card button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Efeito ao passar o mouse nos cards */
+.pet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Seção de Contato */
+.contact-section {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.contact-section h2 {
+    color: #5A90A6;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+/* Formulário de Contato */
+.contact-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    color: #5A90A6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    height: 600px;
+    resize: initial;
+
+}
+
+.contact-form .form-control:focus {
+    border-color: #5A90A6;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #5A90A6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #407d92;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+
+/* Botão do Chatbot */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5A90A6;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Caixa do Chatbot */
+.chatbot-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Cabeçalho do Chatbot */
+.chatbot-header {
+    background-color: #5A90A6;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chatbot-header h4 {
+    margin: 0;
+}
+
+/* Mensagens do Chatbot */
+.chatbot-messages {
+    padding: 2px;
+    height: 180px;
+    overflow-y: auto;
+    font-size: 10px;
+    color: #333;
+}
+
+/* Entrada de Mensagens */
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.chatbot-input button {
+    background-color: #5A90A6;
+    color: white;
+    border: none;
+    padding: 2px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+    background-color: #407d92;
+}
+
+/**** Estilo da Página de Doações ****/
+
+/* Hero Section */
+.hero-donation {
+  background-color: #0d3b66;
+  color: #ffffff;
+  padding: 50px 20px;
+}
+
+.hero-donation h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-donation p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-donation .btn {
+  background-color: #f4d35e;
+  color: #0d3b66;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-donation .btn:hover {
+  background-color: #ee964b;
+}
+
+/* Donation Info Section */
+.donation-info {
+  margin: 40px 0;
+  color: #333333;
+}
+
+.donation-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.donation-info p {
+  font-size: 1.2rem;
+}
+
+/* Comments Section */
+.donor-comments {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.donor-comments h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 25px;
+}
+
+.comments-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comment-card {
+  background-color: #f4d35e;
+  padding: 20px;
+  border-radius: 10px;
+  color: #0d3b66;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.comment-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.statistics {
+  background-color: #3a3a3a; /* Altere para se alinhar ao tema do site */
+  padding: 40px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.statistics h3 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.statistics p {
+  font-size: 18px;
+  margin: 0;
+}
+
+header {
+    animation: fromTop 600ms 100ms backwards;
+}
+
+section {
+    margin-top: 20px;
+    animation: fromBottom 800ms 600ms backwards;
+}
+
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
