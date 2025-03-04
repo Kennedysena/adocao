@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Animanaus - Ajude a salvar animais abandonados com doações que garantem abrigo, cuidados médicos, alimentação e muito amor."
+    />
     <title>Animanaus</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -17,72 +21,107 @@
   </head>
   <body>
     <!-- Header -->
-    <header
-      class="d-flex justify-content-between align-items-center p-3 bg-light"
-    >
-      <div class="d-flex items-center-center gap-1 fs-5">
+       <header class="d-flex justify-content-between align-items-center p-4">
+      <div class="d-flex align-items-center gap-1 fs-5">
         <i class="ph ph-dog fs-2"></i>
         <a class="navbar-brand logo" href="index.html">ANIMANAUS</a>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <!-- Botão de Menu Hambúrguer -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Links do Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-4">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="adote.html">Adote</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="doacao.html">Doações</a>
-              </li>
-              <li class="nav-item">
-                <button id="toggle-mode">
+      <!-- Menu de navegação para dispositivos grandes -->
+      <nav class="navbar d-none d-lg-block d-flex align-items-center justify-content-center">
+        <ul class="navbar-nav d-flex flex-row gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adote.html">Adote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="doacao.html">Doações</a>
+          </li>
+             <li class="nav-item">
+                <button class="toggle-mode">
                   <span class="sr-only">Ativar light mode!</span>
                   <i class="ph ph-sun"></i>
                   <i class="ph ph-moon"></i>
                 </button>
               </li>
-            </ul>
-          </div>
-        </div>
+        </ul>
       </nav>
+      <!-- Botão hamburger para dispositivos pequenos -->
+      <button
+        class="navbar-toggler d-lg-none fs-5"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasMenu"
+        aria-controls="offcanvasMenu"
+        aria-label="Toggle navigation"
+      >
+       <span><i class="ph ph-list"></i></span>
+      </button>
     </header>
 
+    <!-- Offcanvas: Menu lateral para dispositivos pequenos -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasMenu"
+      aria-labelledby="offcanvasMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+          <button class="toggle-mode">
+                  <span class="sr-only">Ativar light mode!</span>
+                  <i class="ph ph-sun"></i>
+                  <i class="ph ph-moon"></i>
+                </button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Fechar"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adote.html">Adote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="doacao.html">Doações</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <main>
-      <section class="hero-donation text-center py-5">
-        <h1>Contribua para o ANIMANAUS</h1>
+      <section class="hero-donation text-center py-5 text-white mt-0">
+        <h1 class="text-white">Contribua para o ANIMANAUS</h1>
         <p>Ajude-nos a transformar vidas, uma doação por vez.</p>
         <a
           href="https://wa.me/559299084185?text=Gostaria%20de%20fazer%20uma%20doação"
           class="btn btn-primary"
+          rel="noopener noreferrer"
           >Doe Agora</a
         >
       </section>
 
-      <section class="donation-info container text-center">
-        <h2>Por que doar?</h2>
+      <section class=" container d-flex flex-column align-items-center justify-content-center text-center mt-5 mb-5">
+        <h2>Por que doar ?</h2>
         <p>
           Suas doações ajudam a salvar animais abandonados, garantindo abrigo,
           cuidados médicos, alimentação e muito amor até encontrarem um lar
@@ -90,37 +129,40 @@
         </p>
       </section>
 
-      <section class="donor-comments container">
-        <h2>Depoimentos de Nossos Doadores</h2>
+      <section class="donor-comments container d-flex flex-column text-center justify-content-center">
+        <h2 class="">Depoimentos de Nossos Doadores</h2>
         <div class="comments-container">
           <div class="comment-card">
             <p>
               "Doei para o ANIMANAUS e vi o impacto que meu gesto teve. É
               maravilhoso saber que ajudei a salvar vidas!"
             </p>
-            <h4>- Maria Silva</h4>
+             <img src="imagem/Maria Silva.jpg" alt="Cachorro para adoção" class="img-fluid w-10 rounded-circle img-custom">
+            <h4 class="mt-2"> - Maria Silva</h4>
           </div>
           <div class="comment-card">
             <p>
               "O trabalho do ANIMANAUS é incrível! Contribuir me trouxe muita
               alegria e satisfação."
             </p>
-            <h4>- João Pereira</h4>
+             <img src="imagem/João Pereira.jpg" alt="Cachorro para adoção" class="img-fluid w-10 rounded-circle img-custom">
+            <h4 class="mt-2"> - João Pereira</h4>
           </div>
           <div class="comment-card">
             <p>
               "A adoção do Thor foi um marco na minha vida. Doar para esta causa
               só me fez amar mais os animais."
             </p>
-            <h4>- Ana Oliveira</h4>
+            <img src="imagem/Ana Oliveira.jpg" alt="Cachorro para adoção" class="img-fluid w-10 rounded-circle img-custom">
+            <h4 class="mt-2"> - Ana Oliveira</h4>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Rodapé -->
-    <footer class="text-center p-3 bg-dark text-white">
-      <p>© 2024 Animanaus. Todos os direitos reservados.</p>
+        <footer class="text-center p-3 text-white">
+      <p>© <span id="year"></span> Animanaus. Todos os direitos reservados.</p>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 

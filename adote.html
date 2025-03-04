@@ -1,147 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animanaus</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header
-      class="d-flex justify-content-between align-items-center p-3 bg-light"
-    >
-      <div class="d-flex items-center-center gap-1 fs-5">
-        <i class="ph ph-dog fs-2"></i>
-        <a class="navbar-brand logo" href="index.html">ANIMANAUS</a>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <!-- Botão de Menu Hambúrguer -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <!-- Links do Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-4">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="adote.html">Adote</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="doacao.html">Doações</a>
-              </li>
-              <li class="nav-item">
-                <button id="toggle-mode">
-                  <span class="sr-only">Ativar light mode!</span>
-                  <i class="ph ph-sun"></i>
-                  <i class="ph ph-moon"></i>
-                </button>
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animanaus</title>
+  <meta name="description"
+    content="Animanaus - Ajude a salvar animais abandonados com doações que garantem abrigo, cuidados médicos, alimentação e muito amor." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="d-flex justify-content-between align-items-center p-4">
+    <div class="d-flex align-items-center gap-1 fs-5">
+      <i class="ph ph-dog fs-2"></i>
+      <a class="navbar-brand logo" href="index.html">ANIMANAUS</a>
+    </div>
+    <!-- Menu de navegação para dispositivos grandes -->
+    <nav class="navbar d-none d-lg-block d-flex align-items-center justify-content-center">
+      <ul class="navbar-nav d-flex flex-row gap-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adote.html">Adote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="doacao.html">Doações</a>
+        </li>
+        <li class="nav-item">
+          <button class="toggle-mode">
+            <span class="sr-only">Ativar light mode!</span>
+            <i class="ph ph-sun"></i>
+            <i class="ph ph-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Botão hamburger para dispositivos pequenos -->
+    <button class="navbar-toggler d-lg-none fs-5" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+      <span><i class="ph ph-list"></i></span>
+    </button>
+  </header>
+
+  <!-- Offcanvas: Menu lateral para dispositivos pequenos -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button class="toggle-mode">
+        <span class="sr-only">Ativar light mode!</span>
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+      </button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adote.html">Adote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="doacao.html">Doações</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-slider-container">
+    <div class="animated-text mt-5">
+      <h1 class="mt-5">Conheça nossos amigos à espera de um lar!</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="history-container d-flex flex-md-row flex-column justify-content-between align-items-center gap-5">
+      <div class="container">
+        <p class="section-title">Mais Peludos Por Aqui</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>
+            Anúncios de Todos os Pets Disponíveis
+          </h2>
+        </div>
+        <div class="row g-3 mt-4 text-center">
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Vira Lata.jpg" alt="Cachorro para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Rex</h3>
+                <p class="card-text">Idade: 2 anos | Raça: SRD</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/adote2.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Belinha</h3>
+                <p class="card-text">Idade: 1 ano | Raça: Angorá</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/adotar3.jpg" alt="Cachorro para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Thor</h3>
+                <p class="card-text">Idade: 3 anos | Raça: Labrador</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/poodle.jpg" alt="Cachorro para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Lua</h3>
+                <p class="card-text">Idade: 6 meses | Raça: Poodle</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 ">
+            <div class="pet-card">
+              <img src="imagem/Yorkshine.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Melisa</h3>
+                <p class="card-text">Idade: 5 meses | Raça: Yorkshine</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Pastor Alemão.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Bernado</h3>
+                <p class="card-text">Idade: 3 anos | Raça: Pastor Alemão</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 ">
+            <div class="pet-card">
+              <img src="imagem/Husky Siberiano.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Floquinho</h3>
+                <p class="card-text">Idade: 4 anos | Raça: Husky Siberiano</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Dálmata.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Fred</h3>
+                <p class="card-text">Idade: 5 anos | Raça: Dálmata</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Border Collin.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Nick</h3>
+                <p class="card-text">Idade: 1 ano | Raça: Border Collin</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Labrador.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Guga</h3>
+                <p class="card-text">Idade: 4 anos | Raça: Labrador</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Pittbull.jpg" alt="Gato para adoção" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h3 class="card-title">Botão</h3>
+                <p class="card-text">Idade: 2 anos | Raça: Pittbull</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="pet-card">
+              <img src="imagem/Beagle.jpg" alt="Gato para adoção" class="img-fluid">
+              <div class="text-center">
+                <h3 class="text-center">Lua</h3>
+                <p>Idade: 6 meses | Raça: Beagle</p>
+                <button href="https://wa.me/559299084185?text=" target="_blank" class="btn btn-primary">Adotar</button>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+  </section>
 
-    <section class="hero-adoption container text-center py-5">
-      <h1>Adote um Pet</h1>
-    </section>
 
-    <section class="adoption-gallery container">
-      <h2>Conheça nossos amigos à espera de um lar</h2>
-      <div class="row">
-        <div class="col-md-3 pet-card">
-          <img
-            src="imagem/adote1.jpg"
-            alt="Cachorro para adoção"
-            class="img-fluid"
-          />
-          <h3>Rex</h3>
-          <p>Idade: 2 anos | Raça: SRD</p>
-          <button class="btn btn-primary">
-            <a href="https://wa.me/559299084185?text=" target="_blank"
-              >Adotar</a
-            >
-          </button>
-        </div>
-        <div class="col-md-3 pet-card">
-          <img
-            src="imagem/adote2.jpg"
-            alt="Gato para adoção"
-            class="img-fluid"
-          />
-          <h3>Belinha</h3>
-          <p>Idade: 1 ano | Raça: Angorá</p>
-          <button class="btn btn-primary">
-            <a href="https://wa.me/559299084185?text=" target="_blank"
-              >Adotar</a
-            >
-          </button>
-        </div>
-        <div class="col-md-3 pet-card">
-          <img
-            src="imagem/adotar3.jpg"
-            alt="Cachorro para adoção"
-            class="img-fluid"
-          />
-          <h3>Thor</h3>
-          <p>Idade: 3 anos | Raça: Labrador</p>
-          <button class="btn btn-primary">
-            <a href="https://wa.me/559299084185?text=" target="_blank"
-              >Adotar</a
-            >
-          </button>
-        </div>
-        <div class="col-md-3 pet-card">
-          <img
-            src="imagem/adote4.webp"
-            alt="Gato para adoção"
-            class="img-fluid"
-          />
-          <h3>Lua</h3>
-          <p>Idade: 6 meses | Raça: Siamês</p>
-          <button class="btn btn-primary">
-            <a href="https://wa.me/559299084185?text=" target="_blank"
-              >Adotar</a
-            >
-          </button>
-        </div>
-      </div>
-    </section>
+  <!-- Rodapé -->
+  <footer class="text-center p-3 text-white">
+    <p>© <span id="year"></span> Animanaus. Todos os direitos reservados.</p>
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-    <!-- Rodapé -->
-    <footer class="text-center p-3 bg-dark text-white">
-      <p>© 2024 Animanaus. Todos os direitos reservados.</p>
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
 </html>

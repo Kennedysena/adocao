@@ -1,146 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animanaus</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header
-      class="d-flex justify-content-between align-items-center p-3 bg-light"
-    >
-      <div class="d-flex items-center-center gap-1 fs-5">
-        <i class="ph ph-dog fs-2"></i>
-        <a class="navbar-brand logo" href="index.html">ANIMANAUS</a>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <!-- Botão de Menu Hambúrguer -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animanaus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="d-flex justify-content-between align-items-center p-4">
+    <div class="d-flex align-items-center gap-1 fs-5">
+      <i class="ph ph-dog fs-2"></i>
+      <a class="navbar-brand logo" href="index.html">ANIMANAUS</a>
+    </div>
+    <!-- Menu de navegação para dispositivos grandes -->
+    <nav class="navbar d-none d-lg-block d-flex align-items-center justify-content-center">
+      <ul class="navbar-nav d-flex flex-row gap-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adote.html">Adote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="doacao.html">Doações</a>
+        </li>
+        <li class="nav-item">
+          <button class="toggle-mode">
+            <span class="sr-only">Ativar light mode!</span>
+            <i class="ph ph-sun"></i>
+            <i class="ph ph-moon"></i>
           </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Botão hamburger para dispositivos pequenos -->
+    <button class="navbar-toggler d-lg-none fs-5" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+      <span><i class="ph ph-list"></i></span>
+    </button>
+  </header>
 
-          <!-- Links do Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-4">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="adote.html">Adote</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="doacao.html">Doações</a>
-              </li>
-              <li class="nav-item">
-                <button id="toggle-mode">
-                  <span class="sr-only">Ativar light mode!</span>
-                  <i class="ph ph-sun"></i>
-                  <i class="ph ph-moon"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-<section id="informacoes" class="apresentation">
-  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
-    
-    <!-- Logo -->
-    <div class="d-flex flex-column align-items-center ">
-      <img src="imagem/Dog.png" alt="Logo do Animanaus com a silhueta de um cachorro" class="dog" />
+  <!-- Offcanvas: Menu lateral para dispositivos pequenos -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button class="toggle-mode">
+        <span class="sr-only">Ativar light mode!</span>
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+      </button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
-    
-    <!-- Informações -->
-    <div class="informacoes-dog d-flex flex-column align-items-center justify-content-center text-center">
-      <h2 class="fs-2 fw-bold mt-4">Encontre o Seu Novo Melhor Amigo</h2>
-      <p class="fs-6">Procure o seu animal de estimação agora mesmo.</p>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adote.html">Adote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="doacao.html">Doações</a>
+        </li>
+      </ul>
     </div>
-  
   </div>
-</section>
- <section>
-        <div class="history-container d-flex flex-md-row flex-column justify-content-between align-items-center gap-5">
-          <div class="container">
-            <p class="section-title">Novos Peludos Por Aqui</p>
-            <div class="d-flex justify-content-between align-items-center">
-            <h2>
-              Anúncios Mais Recentes
-            </h2>
-            <a href="adote.html" class="btn btn-primary border-0 text-white d-flex align-items-center justify-content-center gap-2">
-  Ver todos os anúncios <i class="ph ph-arrow-right"></i>
-</a>
 
-            </div>
-            <div class="d-flex flex-md-row flex-column gap-3 mt-4">
-        <div class="col-md-3 pet-card">
+  <section id="informacoes" class="apresentation">
+    <div class="d-flex justify-content-between align-items-center gap-4">
+
+      <!-- Logo -->
+      <div class="d-flex flex-column align-items-center ">
+        <img src="imagem/Dog.png" alt="Logo do Animanaus com a silhueta de um cachorro" class="dog" />
+      </div>
+
+      <!-- Informações -->
+      <div class="informacoes-dog d-flex flex-column align-items-center justify-content-center text-center">
+        <h2 class="fs-1 fw-bold mt-4">Encontre o Seu Novo Melhor Amigo</h2>
+        <p class="fs-6">Procure o seu animal de estimação agora mesmo.</p>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div class="history-container d-flex flex-md-row flex-column justify-content-between align-items-center gap-5">
+      <div class="container">
+        <p class="section-title">Novos Peludos Por Aqui</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>
+            Anúncios Mais Recentes
+          </h2>
+          <a href="adote.html"
+            class="btn btn-primary border-0 text-white d-flex align-items-center justify-content-center gap-2">
+            Ver todos os anúncios <i class="ph ph-arrow-right"></i>
+          </a>
+
+        </div>
+        <div class="d-flex flex-md-row flex-column gap-3 mt-4">
+          <div class="col-md-3 pet-card">
             <img src="imagem/adote1.jpg" alt="Cachorro para adoção" class="img-fluid">
             <h3>Rex</h3>
             <p>Idade: 2 anos | Raça: SRD</p>
             <button class="btn btn-primary">
-                <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
+              <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
             </button>
-        </div>
-        <div class="col-md-3 pet-card">
+          </div>
+          <div class="col-md-3 pet-card">
             <img src="imagem/adote2.jpg" alt="Gato para adoção" class="img-fluid">
             <h3>Belinha</h3>
             <p>Idade: 1 ano | Raça: Angorá</p>
             <button class="btn btn-primary">
-                <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
+              <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
             </button>
-        </div>
-        <div class="col-md-3 pet-card">
+          </div>
+          <div class="col-md-3 pet-card">
             <img src="imagem/adotar3.jpg" alt="Cachorro para adoção" class="img-fluid">
             <h3>Thor</h3>
             <p>Idade: 3 anos | Raça: Labrador</p>
             <button class="btn btn-primary">
-                <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
+              <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
             </button>
-        </div>
-        <div class="col-md-3 pet-card">
+          </div>
+          <div class="col-md-3 pet-card">
             <img src="imagem/adote4.webp" alt="Gato para adoção" class="img-fluid">
             <h3>Lua</h3>
             <p>Idade: 6 meses | Raça: Siamês</p>
             <button class="btn btn-primary">
-                <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
+              <a href="https://wa.me/559299084185?text=" target="_blank">Adotar</a>
             </button>
+          </div>
         </div>
-    </div>
       </div>
       <div>
-    </div>
-    </section>
+      </div>
+  </section>
 
- <section>
-        <div class="history-container d-flex flex-md-row flex-column justify-content-between align-items-center gap-5">
-            <img src="imagem//Dog&Woman.jpg" alt="Mulher com cachorro" class="history-img">
+  <section>
+    <div class="history-container d-flex flex-md-row flex-column justify-content-between align-items-center gap-5">
+      <img src="imagem//Dog&Woman.jpg" alt="Mulher com cachorro" class="history-img">
       <div class="container py-5">
         <p class="section-title">Adotando Um Animal de Estimação</p>
         <h2>
@@ -150,12 +165,14 @@
           Ajudando a encontrar um lar para cada animal de estimação.
         </p>
         <h5>
-           Sei De Um Animal Que Está Sofrendo Maus Tratos.
+          Sei De Um Animal Que Está Sofrendo Maus Tratos.
         </h5>
         <p>
-          Denuncie! A Lei 9605/98 prevê os maus-tratos a animais como crime. Se for flagrante, disque 190 e chame a polícia. Se não for, junte o máximo possível de provas (fotos, vídeos, testemunhas) e faça um boletim de ocorrência na delegacia mais próxima. Não seja omisso, pois a omissão só favorece o agressor, nunca a vítima.
+          Denuncie! A Lei 9605/98 prevê os maus-tratos a animais como crime. Se for flagrante, disque 190 e chame a
+          polícia. Se não for, junte o máximo possível de provas (fotos, vídeos, testemunhas) e faça um boletim de
+          ocorrência na delegacia mais próxima. Não seja omisso, pois a omissão só favorece o agressor, nunca a vítima.
         </p>
-          <h5>O Que É E Como Funciona o ANIMANAUS</h5>
+        <h5>O Que É E Como Funciona o ANIMANAUS</h5>
         <p>
           <strong>O ANIMANAUS</strong> não é apenas sobre salvar animais. É sobre dar esperança a
           seres que foram esquecidos, sobre mudar a vida de famílias inteiras
@@ -168,152 +185,76 @@
           missão estará longe de ser concluída. O trabalho continua, a luta
           nunca termina. Porque, no fim, a transformação começa com um pequeno
           gesto de amor.
-          <br/>
-           O ANIMANAUS, mais do que um abrigo, é uma esperança para todos aqueles
-          que acreditam que é possível salvar um animal e transformar vidas.
-          Esse é o nosso compromisso, essa é a nossa história.
-        </p>
-      </div>
-      <div>
-    </div>
-    </section>
-
-    <!-- Vídeo -->
-    <!-- <section id="video" class="text-center p-5">
-      <h3>Assista nosso vídeo</h3>
-      <video class="mt-3" width="73%" autoplay muted loop controls>
-        <source src="video/video.webm" type="video/mp4" />
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-    </section>
-
-    <section class="hero container text-center">
-      <h1>Adote um amigo!</h1>
-      <p>
-        Transforme uma vida e faça parte de um movimento que conecta tecnologia
-        e empatia.
-      </p>
-      <a
-        href="https://wa.me/559299084185?text="
-        class="btn btn-lg btn-primary"
-        target="_blank"
-        >Saiba Mais</a
-      >
-    </section>
-
-    <!-- <div class="history-container">
-      <div class="container py-5">
-        <h2 class="section-title">A História do ANIMANAUS</h2>
-        <p>
-          Em uma cidade marcada por indiferença e abandono, nasceu o ANIMANAUS,
-          um projeto que não só salvou vidas, mas também transformou a maneira
-          como as pessoas enxergam os animais. Tudo começou com um pequeno grupo
-          de voluntários apaixonados, que, armados apenas de amor e dedicação,
-          se lançaram em uma missão para resgatar animais das ruas da cidade.
-        </p>
-        <p>
-          Eles não tinham recursos, mas a necessidade era grande. Cada cão
-          abandonado, cada gatinho perdido, era um chamado para a ação. Sem
-          abrigo, sem comida, e sem um futuro, os animais estavam à mercê da
-          sorte. Mas, para os fundadores do ANIMANAUS, não existia outra opção.
-          "Nós não podemos deixar que esses animais morram sozinhos", disseram.
-        </p>
-        <p>
-          As dificuldades foram muitas. O apoio da comunidade era escasso, as
-          noites passavam em claro, e o medo de não conseguir mais resgatar
-          nenhum animal era constante. Mas, em cada história de superação, em
-          cada vida salva, eles encontraram forças para continuar. Um cão
-          adotado, um gato acolhido, tudo isso alimentava a chama da esperança.
-        </p>
-        <p>
-          Aos poucos, o ANIMANAUS se consolidou como uma referência. Não era
-          apenas um abrigo, era um símbolo de resiliência. Com o tempo, mais
-          voluntários se uniram ao projeto. Pessoas com histórias de vida
-          semelhantes, que entenderam a dor dos animais e que se viam em cada um
-          deles. O projeto foi crescendo, mas nunca perdeu sua essência.
-        </p>
-        <p>
-          Mas as dificuldades não acabaram. A cada resgaste, o desafio se
-          renovava. As histórias de abandono eram ainda mais duras do que se
-          imaginava. Muitos animais chegaram ao ANIMANAUS em estados críticos de
-          saúde, sem esperança alguma. Mas, com o tempo e com a ajuda de
-          profissionais, todos começaram a se recuperar.
-        </p>
-        <p>
-          O ANIMANAUS não é apenas sobre salvar animais. É sobre dar esperança a
-          seres que foram esquecidos, sobre mudar a vida de famílias inteiras
-          através da adoção e sobre criar uma rede de apoio onde todos se
-          importam. Com amor, cada dia é uma nova oportunidade para fazer a
-          diferença.
-        </p>
-        <p>
-          E assim, o ANIMANAUS segue em frente, enfrentando novos desafios, mas
-          sempre com a certeza de que, enquanto houver um animal necessitado, a
-          missão estará longe de ser concluída. O trabalho continua, a luta
-          nunca termina. Porque, no fim, a transformação começa com um pequeno
-          gesto de amor.
-        </p>
-        <p>
+          <br />
           O ANIMANAUS, mais do que um abrigo, é uma esperança para todos aqueles
           que acreditam que é possível salvar um animal e transformar vidas.
           Esse é o nosso compromisso, essa é a nossa história.
         </p>
       </div>
-    </div> -->
-
-    <!-- Vídeo -->
-    <section id="video" class="text-center">
-      <div class="d-flex flex-md-row flex-column align-items-center justify-content-between">
-      <video class="mt-6" width="55%" autoplay muted loop controls>
-        <source src="video/video.webm" type="video/mp4" />
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-      <div class="d-flex flex-column align-items-center justify-content-center">
-      <h1>Adote um amigo!</h1>
-      <strong class="mb-4">
-        Transforme uma vida e faça parte de um movimento que conecta tecnologia
-        e empatia.
-      </strong>
-      <a
-        href="https://wa.me/559299084185?text="
-        class="btn btn-lg btn-primary border-0 text-white d-flex align-items-center justify-content-center"
-        target="_blank"
-        >Saiba Mais</a
-      >
+      <div>
       </div>
-    </section>
+  </section>
 
-    <!-- Estatísticas -->
-    <section class="statistics container text-center py-5">
-      <h2 class="mb-4" style="color: white">Nossas Conquistas</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <h3 style="color: white">
-            <span class="stat" data-max="1500">0</span>+
-          </h3>
-          <p style="color: white">Animais Resgatados</p>
-        </div>
-        <div class="col-md-4">
-          <h3 style="color: white">
-            <span class="stat" data-max="1000">0</span>+
-          </h3>
-          <p style="color: white">Adoções Realizadas</p>
-        </div>
-        <div class="col-md-4">
-          <h3 style="color: white">
-            <span class="stat" data-max="300">0</span>+
-          </h3>
-          <p style="color: white">Voluntários Ativos</p>
-        </div>
+  <!-- Vídeo -->
+  <section id="video" class="history-container text-center">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-7 col-12">
+        <video class="w-100 mt-6" autoplay muted loop controls>
+          <source src="video/video.webm" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
       </div>
-    </section>
+      <div class="col-md-5 col-12 d-flex flex-column align-items-center justify-content-center">
+        <h1>Adote um amigo!</h1>
+        <strong class="mb-4">
+          Transforme uma vida e faça parte de um movimento que conecta tecnologia
+          e empatia.
+        </strong>
+        <a href="https://wa.me/559299084185?text="
+          class="btn btn-lg btn-primary border-0 text-white d-flex align-items-center justify-content-center"
+          target="_blank">
+          Saiba Mais
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Rodapé -->
-    <footer class="text-center p-3 text-white">
-      <p>© 2024 Animanaus. Todos os direitos reservados.</p>
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Estatísticas -->
+  <section class="statistics container text-center py-5">
+    <h2 class="mb-4" style="color: white">Nossas Conquistas</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3 style="color: white">
+          <span class="stat" data-max="1500">0</span>+
+        </h3>
+        <p style="color: white">Animais Resgatados</p>
+      </div>
+      <div class="col-md-4">
+        <h3 style="color: white">
+          <span class="stat" data-max="1000">0</span>+
+        </h3>
+        <p style="color: white">Adoções Realizadas</p>
+      </div>
+      <div class="col-md-4">
+        <h3 style="color: white">
+          <span class="stat" data-max="300">0</span>+
+        </h3>
+        <p style="color: white">Voluntários Ativos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-center p-3 text-white">
+    <p>© <span id="year"></span> Animanaus. Todos os direitos reservados.</p>
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
