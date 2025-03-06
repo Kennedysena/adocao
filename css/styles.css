@@ -27,7 +27,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  height: 100vh;
   width: 100%;
 }
 
@@ -597,7 +596,6 @@ footer p {
   padding-right: 5rem;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: end;
 }
